@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(103, 66, 138); */
+}
+
+.container{
+    display: flex;
+    max-width: 1px;
+    margin: auto;
+    width: 100%;
+    min-width: 320px;
+}
+
+.section-header{
+    height: 100vh;
+
+    background-image:url('./images/bg-pattern-intro-desktop.svg');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(353, 100%, 62%);
+    border-bottom-left-radius: 6rem;
+
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    padding: 4.5% 0;
+    width: 100%;
+    max-width: 1050px;
+    margin: auto;
+    
+}
+
+nav .btn-group .btn-login{
+    text-decoration: none;
+    font-family: 'Overpass', sans-serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+nav .btn-group .btn-signup{
+    text-decoration: none;
+    font-family: 'ubuntu', sans-serif;
+    background-color: #fff;
+    color: hsl(356, 100%, 66%);
+    font-weight: bold;
+    font-size: 15px;
+    padding: 13px 40px;
+    border-radius: 100px;
+    margin-left: 30px;
+    transition: 0.4s;
+}
+
+nav .btn-group .btn-signup:hover{
+    background-color: hsl(355, 100%, 74%);
+    color: #fff;
+}
+
+nav .btn-group{
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-group{
+    display: flex;
+}
+
+.menu{
+    list-style: none;
+    margin-left: 3rem;
+    display: flex;
+    align-items:center;
+}
+
+
+.menu li{
+    position:relative;
+    /* float:left; */
+    transition: 0.5s;
+    margin-left: 0.6rem;
+}
+
+.menu li a{
+    color:hsl(0, 0%, 100%);
+    text-decoration:none;
+    padding: 0 10px;
+    display:block;
+    font-size: 16px;
+    font-family: 'ubuntu', sans-serif;
+    
+}
+
+.menu li img{
+    margin-left: 4px;
+    transition: 0.5s;
+}
+
+.menu li:hover img{
+    transform: rotate(-180deg);
+}
+
+.menu li ul{
+    position:absolute;
+    background-color:hsl(0, 0%, 100%);
+    display:none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px rgb(0 0 0 / 40%);
+    margin-top: 3px;
+}
+
+.menu li:hover ul, .menu li.over ul{display:block;}
+
+.menu li ul li{
+    display:block;
+    width: 100px;
+    margin: 25px;
+}
+
+.menu li ul li a{
+    color: gray;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu li ul li a:hover{
+    color: black;
+}
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 40vh;
+}
+
+.hero h1{
+    font-family: 'Overpass', sans-serif;
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+.hero p{
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Overpass', sans-serif;
+    margin: 1rem 0 3rem 0;
+}
+
+
+.hero .btn-group-hero a{
+    text-decoration: none;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0.7rem 1.5rem;
+    border-radius: 100px;
+    transition: 0.4s;
+    margin-right: 1rem;
+}
+
+.hero .btn-group-hero .btn-start{
+    background-color: #fff;
+    color: hsl(356, 100%, 66%);
+}
+
+.hero .btn-group-hero .btn-start:hover{
+    color: #fff;
+    background-color: hsl(355, 100%, 74%);
+}
+
+.hero .btn-group-hero .btn-learn{
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.hero .btn-group-hero .btn-learn:hover{
+    background-color: #fff;
+    color: hsl(355, 100%, 74%);
+}
