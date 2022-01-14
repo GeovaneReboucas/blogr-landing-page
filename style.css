@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: rgb(103, 66, 138); */
 }
 
 body, html{
     overflow-x: hidden;
     height: 100%; 
+    background-color: hsl(0, 26%, 96%);
 }
 
 .container{
@@ -195,7 +195,6 @@ nav .nav-group{
 
 .description .container{
     height: 120vh;
-    background-color: #fff;
     font-family: 'Overpass', sans-serif;
     display: flex;
     align-items: center;
@@ -256,6 +255,8 @@ nav .nav-group{
 
 .infrastructure{
     padding: 4rem 0;
+    
+    /* border: 2px solid red; */
 }
 
 .infrastructure .container-infra{
@@ -302,4 +303,49 @@ nav .nav-group{
 .infrastructure .container-infra .container .infra-text p{
     font-size: 1.1rem;
 }
+
+
+/* features */
+.features{
+    padding: 2rem 0;
+}
+
+.features .container{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+
+
+}
+
+.features .container .feature-img{
+    width: 50%;
+    position: relative;
+    right: 30rem;
+
+}
+
+.features .container .feature-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.features .container .feature-text h1{
+    color: hsl(208, 49%, 24%);
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+}
+
+.features .container .feature-text p{
+    color: hsl(207, 13%, 34%);
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.feature-text p:first-of-type{
+    margin-bottom: 4rem;
+}
+
 
