@@ -5,12 +5,16 @@
     /* background-color: rgb(103, 66, 138); */
 }
 
+body, html{
+    overflow-x: hidden;
+    height: 100%; 
+}
+
 .container{
-    display: flex;
-    max-width: 1px;
+    max-width: 1100px;
     margin: auto;
     width: 100%;
-    min-width: 320px;
+    min-width: 420px;
 }
 
 .section-header{
@@ -31,7 +35,7 @@ header nav{
     /* border: 2px solid red; */
     padding: 4.5% 0;
     width: 100%;
-    max-width: 1050px;
+    max-width: 1100px;
     margin: auto;
     
 }
@@ -138,7 +142,7 @@ nav .nav-group{
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    height: 40vh;
+    height: 60vh;
 }
 
 .hero h1{
@@ -186,3 +190,116 @@ nav .nav-group{
     background-color: #fff;
     color: hsl(355, 100%, 74%);
 }
+
+/* Descriçao */
+
+.description .container{
+    height: 120vh;
+    background-color: #fff;
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 7rem 0;
+}
+
+.description .container h1{
+    text-align: center;
+    color: hsl(208, 49%, 24%);
+    font-size: 2.8rem;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.container .content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+}
+
+.description .container .content .description-text{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-top: 4rem;
+
+}
+
+.description-text .text-intro h3, .description-text .text-content h3{
+    color: hsl(208, 49%, 24%);
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+}
+
+.description-text .text-intro p, .description-text .text-content p{
+    margin-bottom: 3.5rem;
+    font-size: 1.1rem;
+    color: hsl(207, 13%, 34%);
+}
+
+.container .content .description-img{
+    width: 10%;
+    position: absolute;
+    left: 42rem;
+}
+
+.container .content .description-img img{
+    width: 47rem;
+}
+
+
+/* infrastructure */
+
+.infrastructure{
+    padding: 4rem 0;
+}
+
+.infrastructure .container-infra{
+    height: 60vh;
+    background-color: hsl(237, 17%, 21%);
+    background-image: url('./images/bg-pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: bottom -100px left -60%;
+    font-family: 'Overpass', sans-serif;
+    border-radius: 0px 90px;
+
+    position: relative;
+}
+
+.infrastructure .container-infra .container{
+    display: flex;
+    height: 100%;
+}
+
+.infrastructure .container-infra .container .infra-img{
+    width: 43%;
+    position: relative;
+    top: -3rem;
+
+}
+
+.infrastructure .container-infra .container .infra-img img{
+    width: 500px;
+}
+
+.infrastructure .container-infra .container .infra-text{
+    height: 100%;
+    color: #fff;
+    font-family: 'Overpass', sans-serif;
+    margin: 7rem 0 0 2.5rem;
+
+}
+
+.infrastructure .container-infra .container .infra-text h1{
+    font-size: 2.5rem;
+    margin-bottom: 1.4rem;
+}
+
+.infrastructure .container-infra .container .infra-text p{
+    font-size: 1.1rem;
+}
+
