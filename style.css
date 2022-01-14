@@ -10,6 +10,15 @@ body, html{
     background-color: hsl(0, 26%, 96%);
 }
 
+::-webkit-scrollbar {
+    width:10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(208, 49%, 24%);
+}
+
 .container{
     max-width: 1100px;
     margin: auto;
@@ -349,3 +358,67 @@ nav .nav-group{
 }
 
 
+/* footer */
+footer{
+    height: 60vh;
+    background-color: hsl(240, 10%, 16%);
+    border-radius: 0px 90px 0px 0px;
+    font-family: 'ubuntu', sans-serif;
+    padding: 4rem 0rem;
+}
+
+footer .container{
+    display: flex;
+    height: 100%;
+}
+
+footer .container img{
+    height: 3rem;
+    margin-right: 6rem;
+    /* width: 100%; */
+}
+
+footer .container .footer-element{
+    width: 100%;
+}
+
+footer .container .footer-element h3{
+    color: #fff;
+    font-size: 1.2rem;
+
+}
+
+footer .container .footer-element .elements{
+    font-size: 1rem;
+    margin-top: 1.9rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .container .footer-element .elements a{
+    text-decoration: none;
+    color: hsl(240, 2%, 79%);
+    margin-bottom: 1.2rem;
+}
+
+footer .container .footer-element .elements a:hover{
+    text-decoration:underline;
+}
+
+footer .name{
+    text-align: center;
+    margin-top: 0.7rem;
+    color: hsl(240, 2%, 79%);
+}
+
+footer .name a{
+    text-decoration: none;
+    color: hsl(355, 100%, 74%);
+    /* color: hsl(353, 100%, 62%); */
+    transition:ease-in-out 0.4s;
+}
+
+footer .name a:hover{
+    color: hsl(353, 100%, 62%);
+    /* color: hsl(355, 100%, 74%); */
+}
