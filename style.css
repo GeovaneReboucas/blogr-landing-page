@@ -36,12 +36,12 @@ body, html{
     background-color: hsl(353, 100%, 62%);
     border-bottom-left-radius: 6rem;
 
+    position: relative;
 }
 
 header nav{
     display: flex;
     justify-content: space-between;
-    /* border: 2px solid red; */
     padding: 4.5% 0;
     width: 100%;
     max-width: 1100px;
@@ -84,7 +84,7 @@ nav .nav-group{
     display: flex;
 }
 
-.menu{
+nav .nav-group .menu{
     list-style: none;
     margin-left: 3rem;
     display: flex;
@@ -92,14 +92,13 @@ nav .nav-group{
 }
 
 
-.menu li{
+nav .nav-group .menu li{
     position:relative;
-    /* float:left; */
     transition: 0.5s;
     margin-left: 0.6rem;
 }
 
-.menu li a{
+nav .nav-group .menu li a{
     color:hsl(0, 0%, 100%);
     text-decoration:none;
     padding: 0 10px;
@@ -109,16 +108,16 @@ nav .nav-group{
     
 }
 
-.menu li img{
+nav .nav-group .menu li img{
     margin-left: 4px;
     transition: 0.5s;
 }
 
-.menu li:hover img{
+nav .nav-group .menu li:hover img{
     transform: rotate(-180deg);
 }
 
-.menu li ul{
+nav .nav-group .menu li ul{
     position:absolute;
     background-color:hsl(0, 0%, 100%);
     display:none;
@@ -127,24 +126,38 @@ nav .nav-group{
     margin-top: 3px;
 }
 
-.menu li:hover ul, .menu li.over ul{display:block;}
+nav .nav-group .menu li:hover ul, nav .nav-group .menu li.over ul{display:block;}
 
-.menu li ul li{
+nav .nav-group .menu li ul li{
     display:block;
     width: 100px;
     margin: 25px;
 }
 
-.menu li ul li a{
+nav .nav-group .menu li ul li a{
     color: gray;
     font-size: 16px;
     transition: 0.3s;
 }
 
-.menu li ul li a:hover{
+nav .nav-group .menu li ul li a:hover{
     color: black;
 }
 
+
+
+#menuMobile{
+    display: none;
+}
+
+header nav .menu-hamburger{
+    display: none;
+    height: 1.5rem;
+    width: 2.2rem;
+}
+
+
+/* hero  */
 
 .hero{
     display: flex;
@@ -203,21 +216,25 @@ nav .nav-group{
 /* Descriçao */
 
 .description .container{
-    height: 120vh;
+    /* height: 120vh; */
+    min-height: 100vh;
+    height: 100%;
     font-family: 'Overpass', sans-serif;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 
-    padding: 7rem 0;
+    padding: 8rem 0;
+    
 }
 
 .description .container h1{
     text-align: center;
     color: hsl(208, 49%, 24%);
     font-size: 2.8rem;
-    height: 100%;
-    margin-bottom: 2rem;
+    /* height: 10%; */
+    margin-bottom: 4rem;
 }
 
 .container .content{
@@ -269,7 +286,7 @@ nav .nav-group{
 }
 
 .infrastructure .container-infra{
-    height: 60vh;
+    /* height: 60vh; */
     background-color: hsl(237, 17%, 21%);
     background-image: url('./images/bg-pattern-circles.svg');
     background-repeat: no-repeat;
@@ -282,11 +299,13 @@ nav .nav-group{
 
 .infrastructure .container-infra .container{
     display: flex;
+    position: relative;
     height: 100%;
 }
 
 .infrastructure .container-infra .container .infra-img{
     width: 43%;
+    height: 390px;
     position: relative;
     top: -3rem;
 
@@ -320,12 +339,11 @@ nav .nav-group{
 }
 
 .features .container{
-    height: 100vh;
+    /* height: 100vh; */
     position: relative;
     display: flex;
     align-items: center;
     font-family: 'Overpass', sans-serif;
-
 
 }
 
@@ -360,22 +378,25 @@ nav .nav-group{
 
 /* footer */
 footer{
-    height: 60vh;
+    /* height: 60vh; */
+    /* min-height: 10vh; */
     background-color: hsl(240, 10%, 16%);
     border-radius: 0px 90px 0px 0px;
     font-family: 'ubuntu', sans-serif;
-    padding: 4rem 0rem;
+    padding: 4rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 footer .container{
     display: flex;
-    height: 100%;
+    margin: 0 auto;
 }
 
 footer .container img{
     height: 3rem;
     margin-right: 6rem;
-    /* width: 100%; */
 }
 
 footer .container .footer-element{
@@ -407,7 +428,7 @@ footer .container .footer-element .elements a:hover{
 
 footer .name{
     text-align: center;
-    margin-top: 0.7rem;
+    margin-top: 2rem;
     color: hsl(240, 2%, 79%);
 }
 
@@ -421,4 +442,215 @@ footer .name a{
 footer .name a:hover{
     color: hsl(353, 100%, 62%);
     /* color: hsl(355, 100%, 74%); */
+}
+
+
+/* responsividade */
+
+@media (min-width: 1380px){
+    .description .container h1{
+        margin-bottom: 7rem;
+        font-size: 3rem;
+    }
+
+    .description-text .text-intro h3, .description-text .text-content h3{
+        font-size: 1.9rem;
+    }
+    
+    .description-text .text-intro p, .description-text .text-content p{
+        font-size: 1.2rem;
+    }
+    
+    .container .content .description-img{
+        left: 42rem;
+    }
+
+    .container .content .description-img img{
+        width: 55rem;
+    }
+}
+
+@media (max-width: 1215px){
+    .container{
+        max-width: 900px;
+        margin: auto;
+        width: 100%;
+        min-width: 420px;
+    }
+
+    header nav{
+        max-width: 900px;
+    }
+
+    
+    .container .content .description-img{
+        /* width: 40%; */
+        position: absolute;
+        left: 32rem;
+    }
+
+    .infrastructure .container-infra .container .infra-img{
+        width: 50%;
+    }
+
+    .infrastructure .container-infra .container .infra-text{
+        /* margin: ; */
+    }
+
+    .infrastructure .container-infra .container .infra-text h1{
+        /* font-size: 1.85rem; */
+    }
+
+    .infrastructure .container-infra .container .infra-text p{
+        /* font-size: 1.2rem; */
+    }
+
+    .features .container .feature-text h1{
+        font-size: 1.85rem;
+    }
+    
+    .features .container .feature-text p{
+        font-size: 1.12rem;
+    }
+
+}
+
+@media (max-width: 1024px){
+    #menuMobile{
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 30px 3px rgb(0 0 0 / 30%);
+
+        max-width: 680px; /* largura do menu*/
+        padding: 30px 0;
+        margin: auto;
+        /* width: 100%; */
+        bottom: 65%;
+        left: 100%;
+        transition: 0.5s;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    #menuMobile .menu{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        transition: 0.5s;
+    }
+
+    #menuMobile .menu ul li{
+        margin-bottom: 2rem;
+        color: hsl(240, 10%, 16%);
+        font-weight: 600;
+        font-family: 'Overpass', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: relative;
+    }
+
+    #menuMobile .menu ul li a{
+        text-decoration: none;
+        color: hsl(240, 10%, 16%);
+        font-weight: 600;
+        font-family: 'Overpass', sans-serif;
+        font-size: 1.3rem;
+
+        display: block;
+    }
+
+    #menuMobile .menu a img{
+        height: 0.65rem;
+        transition: 0.5s;
+    }
+
+    #menuMobile .menu ul li:hover img{
+        transform: rotate(-180deg);
+    }
+
+    #menuMobile .btn-group{
+        width: 80%;
+        border-top: 1px solid gray;
+    }
+
+    #menuMobile .btn-group .btn-login{
+        text-decoration: none;
+        font-family: 'Overpass', sans-serif;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        color: hsl(240, 10%, 16%);
+        font-weight: 600;
+        /* font-weight: bold; */
+    }
+
+    #menuMobile .btn-group .btn-signup{
+        text-decoration: none;
+        font-family: 'ubuntu', sans-serif;
+        background-color: hsl(356, 100%, 66%);
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 13px 40px;
+        border-radius: 100px;
+        /* margin-left: 0px; */
+        transition: 0.4s;
+    }
+
+    #menuMobile .btn-group{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-header #menuMobile .menu ul{
+        list-style: none;
+    }
+
+    #menuMobile .menu ul li .drop-menu ul{
+        padding: 15px 0;
+        border-radius: 10px;
+        background-color: hsl(0, 10%, 92%);
+    }
+
+    #menuMobile .menu ul li .drop-menu ul li{
+        width: 550px; /* largura de dentro do menu */
+        margin-bottom: 0;
+        padding: 10px 0;
+    }
+
+    #menuMobile .menu ul li .drop-menu ul li a{
+        font-size: 1.2rem;
+        font-weight: 550;
+    }
+
+    #menuMobile .menu ul li:hover .drop-menu{
+        display: block;
+    }
+
+    #menuMobile .menu ul li .drop-menu{
+        display: none;
+    }
+
+
+
+    nav .nav-group .menu{
+        display: none;
+    }
+
+    nav .btn-group{
+        display: none;
+    }
+
+    header nav .menu-hamburger{
+        display: block;
+    }
+
+    
 }
