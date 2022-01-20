@@ -10,15 +10,6 @@ body, html{
     background-color: hsl(0, 26%, 96%);
 }
 
-::-webkit-scrollbar {
-    width:10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: hsl(208, 49%, 24%);
-}
-
 .container{
     max-width: 1100px;
     margin: auto;
@@ -27,7 +18,7 @@ body, html{
 }
 
 .section-header{
-    height: 100vh;
+    height: 90vh;
 
     background-image:url('./images/bg-pattern-intro-desktop.svg');
     background-size: 150%;
@@ -287,7 +278,6 @@ header nav .menu-hamburger{
 .infrastructure{
     padding: 4rem 0;
     
-    /* border: 2px solid red; */
 }
 
 .infrastructure .container-infra{
@@ -489,16 +479,30 @@ footer .name a:hover{
     header nav{
         max-width: 900px;
     }
-
     
     .container .content .description-img{
-        /* width: 40%; */
         position: absolute;
         left: 32rem;
     }
 
+    .section-header{
+        background-size: 200%;
+    }
+
     .infrastructure .container-infra .container .infra-img{
         width: 50%;
+    }
+
+    .infrastructure .container-infra .container .infra-text{
+        margin-top: 6rem;
+    }
+
+    .infrastructure .container-infra .container .infra-text h1{
+        font-size: 1.87rem;
+    }
+
+    .infrastructure .container-infra .container .infra-text p{
+        font-size: 1.3rem;
     }
 
     .features .container .feature-text h1{
@@ -511,17 +515,14 @@ footer .name a:hover{
 
 }
 
-@media (max-width: 1215px){
-    .infrastructure .container-infra .container .infra-text{
-        margin-top: 6rem;
+@media (min-width: 980px){
+        ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
     }
 
-    .infrastructure .container-infra .container .infra-text h1{
-        font-size: 1.87rem;
-    }
-
-    .infrastructure .container-infra .container .infra-text p{
-        font-size: 1.3rem;
+    ::-webkit-scrollbar-thumb {
+        background: hsl(208, 49%, 24%);
     }
 }
 
@@ -535,7 +536,7 @@ footer .name a:hover{
     }
 
     #menuMobile{
-        background-color: #fff;
+        background-color: hsl(0, 26%, 96%);
         border-radius: 10px;
         box-shadow: 0 0 30px 3px rgb(0 0 0 / 30%);
 
@@ -667,6 +668,9 @@ footer .name a:hover{
         display: block;
     }
 
+    .infrastructure .container-infra{
+        background-position: bottom -100px right 110px;
+    }
     
 }
 
@@ -718,6 +722,10 @@ footer .name a:hover{
 
     .description .container .content .description-img .editor-mobile{
         display: block;
+    }
+
+    .infrastructure .container-infra{
+        background-position: bottom -10px left -70px;
     }
 
     .infrastructure .container-infra .container{
@@ -862,6 +870,10 @@ footer .name a:hover{
         max-width: 300px;
     }
 
+    .section-header{
+        background-size: 350%;
+    }
+
     .section-header .hero{
         max-width: 350px;
     }
@@ -888,6 +900,10 @@ footer .name a:hover{
 
     .description .container .content .description-text div p{
         font-size: 0.9rem;
+    }
+
+    .infrastructure .container-infra{
+        background-position: bottom 50px right -250px;
     }
 
     .infrastructure .container-infra .container .infra-text h1{
