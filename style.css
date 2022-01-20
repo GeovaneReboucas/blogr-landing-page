@@ -152,8 +152,9 @@ nav .nav-group .menu li ul li a:hover{
 
 header nav .menu-hamburger{
     display: none;
-    height: 1.5rem;
-    width: 2.2rem;
+    height: 1.2rem;
+    width: 1.9rem;
+    cursor: pointer;
 }
 
 
@@ -272,6 +273,10 @@ header nav .menu-hamburger{
     left: 42rem;
 }
 
+.container .content .description-img .editor-mobile{
+    display: none;
+}
+
 .container .content .description-img img{
     width: 47rem;
 }
@@ -351,7 +356,10 @@ header nav .menu-hamburger{
     width: 50%;
     position: relative;
     right: 30rem;
+}
 
+.features .container .feature-img .laptop-mobile{
+    display: none;
 }
 
 .features .container .feature-text{
@@ -493,18 +501,6 @@ footer .name a:hover{
         width: 50%;
     }
 
-    .infrastructure .container-infra .container .infra-text{
-        /* margin: ; */
-    }
-
-    .infrastructure .container-infra .container .infra-text h1{
-        /* font-size: 1.85rem; */
-    }
-
-    .infrastructure .container-infra .container .infra-text p{
-        /* font-size: 1.2rem; */
-    }
-
     .features .container .feature-text h1{
         font-size: 1.85rem;
     }
@@ -515,7 +511,29 @@ footer .name a:hover{
 
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1215px){
+    .infrastructure .container-infra .container .infra-text{
+        margin-top: 6rem;
+    }
+
+    .infrastructure .container-infra .container .infra-text h1{
+        font-size: 1.87rem;
+    }
+
+    .infrastructure .container-infra .container .infra-text p{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 980px){
+    .container{
+        max-width: 880px;
+    }
+
+    header nav{
+        max-width: 880px;
+    }
+
     #menuMobile{
         background-color: #fff;
         border-radius: 10px;
@@ -524,7 +542,6 @@ footer .name a:hover{
         max-width: 680px; /* largura do menu*/
         padding: 30px 0;
         margin: auto;
-        /* width: 100%; */
         bottom: 65%;
         left: 100%;
         transition: 0.5s;
@@ -638,8 +655,6 @@ footer .name a:hover{
         display: none;
     }
 
-
-
     nav .nav-group .menu{
         display: none;
     }
@@ -653,4 +668,276 @@ footer .name a:hover{
     }
 
     
+}
+
+@media (max-width: 912px){
+    .container{
+        max-width: 700px;
+    }
+
+    header nav{
+        max-width: 700px;
+    }
+    
+    .section-header{
+        height: 85vh;
+    }
+
+    .section-header .hero h1{
+        font-size: 2.8rem;
+    }
+
+    .description .container{
+        padding: 6rem 0;
+    }
+
+    .description .container .content{
+        flex-direction: column-reverse;
+        position: static;
+    }
+
+    .description .container .content .description-text{
+        width: 100%;
+        text-align: center;
+    }
+
+    .description .container .content .description-img{
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .description .container .content .description-img img{
+        width: 35rem;
+    }
+
+    .description .container .content .description-img .editor-desktop{
+        display: none;
+    }
+
+    .description .container .content .description-img .editor-mobile{
+        display: block;
+    }
+
+    .infrastructure .container-infra .container{
+        flex-direction: column;
+        padding-bottom: 3rem;
+    }
+
+    .infrastructure .container-infra .container .infra-text{
+        margin-top: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .infrastructure .container-infra .container .infra-img{
+        width: 100%;
+        height: 23rem;
+        display: flex;
+        justify-content: center;
+        top:auto;
+        bottom: 7rem;
+    }
+
+    .infrastructure .container-infra .container .infra-img img{
+        height: 450px;
+    }
+
+    .features{
+        padding: 2rem 0 4rem 0;
+    }
+
+    .features .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features .container .feature-img{
+        width: 100%;
+        right: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .features .container .feature-img .laptop-desktop{
+        display: none;
+    }
+
+    .features .container .feature-img .laptop-mobile{
+        display: block;
+        height: 28rem;
+    }
+
+    footer .container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .container img{
+        margin-right: 0;
+        height: 3rem;
+        width: 8rem;
+    }
+
+    footer .container .footer-element{
+        margin-top: 3rem;
+    }
+
+    footer .container .footer-element .elements{
+        margin-top: 1.4rem;
+    }
+
+}
+
+@media (max-width: 732px){
+
+    .container{
+        max-width: 450px;
+    }
+
+    header nav{
+        max-width: 450px;
+    }
+
+    .section-header #menuMobile{
+        max-width: 450px;
+    }
+
+    #menuMobile .menu ul li .drop-menu ul li{
+        width: 350px; /* largura de dentro do menu */
+    }
+
+    .section-header .hero{
+        max-width: 450px;
+        margin:auto;
+        text-align: center;
+    }
+
+    .section-header .hero h1{
+        font-size: 1.9rem;
+    }
+
+    .section-header .hero p{
+        font-size: 1.1rem;
+    }
+
+    .description .container h1{
+        font-size: 2.2rem;
+    }
+
+    .description .container .content .description-img img{
+        width: 22rem;
+    }
+
+    .description .container .content .description-text div h3{
+        font-size: 1.5rem;
+    }
+
+    .description .container .content .description-text div p{
+        font-size: 1rem;
+    }
+
+    .infrastructure .container-infra .container .infra-text h1{
+        font-size: 1.6rem;
+    }
+
+    .infrastructure .container-infra .container .infra-text p{
+        font-size: 1rem;
+    }
+
+    
+
+    
+}
+
+@media (max-width: 476px){
+
+    .container{
+        max-width: 300px;
+    }
+
+    header nav{
+        max-width: 300px;
+    }
+
+    .section-header .hero{
+        max-width: 350px;
+    }
+
+    .section-header #menuMobile{
+        max-width: 300px;
+    }
+
+    #menuMobile .menu ul li .drop-menu ul li{
+        width: 200px; /* largura de dentro do menu */
+    }
+
+    .description .container h1{
+        font-size: 1.8rem;
+    }
+
+    .description .container .content .description-img img{
+        width: 18rem;
+    }
+
+    .description .container .content .description-text div h3{
+        font-size: 1.3rem;
+    }
+
+    .description .container .content .description-text div p{
+        font-size: 0.9rem;
+    }
+
+    .infrastructure .container-infra .container .infra-text h1{
+        font-size: 1.3rem;
+    }
+
+    .infrastructure .container-infra .container .infra-text p{
+        font-size: 0.9rem;
+    }
+
+    .infrastructure .container-infra .container .infra-img img{
+        height: 350px;
+    }
+
+    .infrastructure .container-infra .container .infra-img{
+        bottom: 3rem;
+    }
+
+    .features .container .feature-text h1{
+        font-size: 1.6rem;
+    }
+
+    .features .container .feature-text p{
+        font-size: 0.9rem;
+    }
+
+    .features .container .feature-img .laptop-mobile{
+        height: 20rem;
+    }
+
+    footer .container img{
+        height: 2rem;
+        width: 5.5rem;
+        
+    }
+
+    footer .name{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+
+}
+
+@media (max-width: 431px){
+    
+    .container{
+        min-width: 100px;
+    }
+
 }
